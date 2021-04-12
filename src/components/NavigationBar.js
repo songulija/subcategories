@@ -28,20 +28,34 @@ function NavigationBar() {
     }, [])
 
     return (
-        <Navbar bg="light" expand="lg">
-            <Navbar.Brand href="#home" className='ml-5'>AutoBazaar</Navbar.Brand>
+        
+        <div className="container">
+            <header className="blog-header py-3">
+                <div className="row flex-nowrap justify-content-between align-items-center">
+                    <div className="col-4 pt-1">
+                        <a className="link-secondary" href="#">Subscribe</a>
+                    </div>
+                    <div className="col-4 text-center">
+                        <a className="blog-header-logo text-dark" href="#">Large</a>
+                    </div>
+                    <div className="col-4 d-flex justify-content-end align-items-center">
+                        <Nav.Link href="#link"> <FaShoppingCart size='1.5em' color='gray'/></Nav.Link>
+                        <a class="btn btn-sm btn-outline-secondary" href="#">Sign up</a>
+                    </div>
+            </div>
+            </header>
+            <Navbar expand="lg">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ml-auto mr-3 py-3">
-                    <Nav.Link href="#home">Light Car</Nav.Link>
+                    <Nav.Link href="#home">Car</Nav.Link>
                     <Nav.Link href="#link">Motorcicle</Nav.Link>
                     <Nav.Link href="#link">Tools</Nav.Link>
-                    <Nav.Link href="#link">Car accesories</Nav.Link>
-                    <Nav.Link href="#link">Engine oil</Nav.Link>
+                    <Nav.Link href="#link">Accesories</Nav.Link>
+                    <Nav.Link href="#link">Engine-Oil</Nav.Link>
                     <Nav.Link href="#link">Filters</Nav.Link>
-                    <Nav.Link href="#link">Brake system</Nav.Link>
-                    <Nav.Link href="#link"><FiLogIn size='1.5em' color='gray' /> Login</Nav.Link>
-                    <Nav.Link href="#link"><FaShoppingCart size='1.5em' color='gray' /> Cart</Nav.Link>
+                    <Nav.Link href="#link">Brakes</Nav.Link>
+                    
                 </Nav>
                 <Form inline>
                     <FormControl type="text" placeholder="Search" className="mr-sm-2" />
@@ -50,6 +64,7 @@ function NavigationBar() {
 
             </Navbar.Collapse>
         </Navbar>
+        </div>
 
     )
 }
